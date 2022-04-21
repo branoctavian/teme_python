@@ -11,7 +11,7 @@ class Cerc:
         print(f"Cercul are raza {self.raza} si culoarea {self.culoare}")
 
 
-    def arie_cerc(self):
+    def aria(self):
         aria = pi * self.raza**2
         return aria
 
@@ -32,9 +32,9 @@ cerc1.descrie_cerc()
 cerc2.descrie_cerc()
 cerc3.descrie_cerc()
 print("===========================================")
-print(f"Aria cercului este: {cerc1.arie_cerc()}")
-print(f"Aria cercului este: {cerc2.arie_cerc()}")
-print(f"Aria cercului este: {cerc3.arie_cerc()}")
+print(f"Aria cercului este: {cerc1.aria()}")
+print(f"Aria cercului este: {cerc2.aria()}")
+print(f"Aria cercului este: {cerc3.aria()}")
 print("===========================================")
 cerc1.diametrul_cercului()
 cerc2.diametrul_cercului()
