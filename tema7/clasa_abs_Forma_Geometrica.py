@@ -6,6 +6,7 @@ class FormaGeometrica:
 
     Pi = 3.14
 
+
     @abstractmethod
     def aria(self):
         raise NotImplementedError
@@ -25,6 +26,10 @@ class Patrat(FormaGeometrica):
         return self.__latura
 
 
+    def aria_patrat(self, latura):
+        a = latura ** 2
+        return a
+
     def set_latura(self, alta_valoare):
         self.__latura = alta_valoare
 
@@ -42,6 +47,11 @@ class Cerc(FormaGeometrica):
 
     def get_raza(self):
         return self.__raza
+
+
+    def aria_cerc(self, raza):
+        a = Pi * raza ** 2
+        return a
 
     def set_raza(self, alta_valoare):
         self.__raza = alta_valoare
@@ -79,3 +89,5 @@ except Exception as e:
     print(e)
 print(R1.descrie())
 
+print(l1.aria_patrat(5))
+print(R1.aria_cerc(2))
