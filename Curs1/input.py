@@ -1,0 +1,8 @@
+# nume = input('Cum te numesti?')
+# print(f'Salut {nume}')
+# age = input('Cati ani ai?')
+# print(f'Ai varsta de {age} ani')
+numar1 = int(input('Introdu primul numar: '))
+numar2 = int(input('Introdu al doilea numar: '))
+print(numar1 - numar2)
+print(numar1 * numar2)
