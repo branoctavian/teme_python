@@ -4,7 +4,7 @@ from abc import abstractmethod
 class FormaGeometrica:
 
 
-    Pi = 3.14
+    Pi = 3.14 # aici nu inteleg cum sa il folosesc pe Pi ib clasa Cerc(FormaGeometrica)
 
 
     @abstractmethod
@@ -89,5 +89,7 @@ except Exception as e:
     print(e)
 print(R1.descrie())
 
-print(l1.aria_patrat(5))
-print(R1.aria_cerc(2))
+print(l1.aria_patrat(5)) # aici cred ca nu trebuie sa introduc eu manual argumentul, nu am stiut cum sa
+                         # il ia automat din declarerea variabile
+print(R1.aria_cerc(2))   # aici cred ca nu trebuie sa introduc eu manual argumentul, nu am stiut cum sa
+                         # il ia automat din declarerea variabile
