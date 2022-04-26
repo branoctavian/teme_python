@@ -1,15 +1,17 @@
-from abc import abstractmethod
+from abc import (ABC, abstractmethod)
 
 
-class FormaGeometrica:
+class FormaGeometrica(ABC):
 
 
-    Pi = 3.14 # aici nu inteleg cum sa il folosesc pe Pi ib clasa Cerc(FormaGeometrica)
+    @public
+    Pi = 3.14 # aici nu inteleg cum sa il folosesc pe Pi in clasa Cerc(FormaGeometrica)
 
 
     @abstractmethod
     def aria(self):
-        raise NotImplementedError
+        print("Calculeaza suprafata unei forme geometrice exprimata in mp")
+        pass
 
     def descrie(self):
         print("Cel mai probabil au colturi")
@@ -26,9 +28,9 @@ class Patrat(FormaGeometrica):
         return self.__latura
 
 
-    def aria_patrat(self, latura):
-        a = latura ** 2
-        return a
+    def aria(self):
+        return self.__latura ** 2
+
 
     def set_latura(self, alta_valoare):
         self.__latura = alta_valoare
@@ -49,9 +51,9 @@ class Cerc(FormaGeometrica):
         return self.__raza
 
 
-    def aria_cerc(self, raza):
-        a = Pi * raza ** 2
-        return a
+    def aria(self):
+        return Pi * self.__raza ** 2
+
 
     def set_raza(self, alta_valoare):
         self.__raza = alta_valoare
@@ -67,29 +69,29 @@ class Cerc(FormaGeometrica):
 l1 = Patrat(5)
 R1 = Cerc(2)
 
-print(l1.get_latura())
+# print(l1.get_latura())
+#
+# l1.set_latura(4)
+# print(l1.get_latura())
+# l1.del_latura()
+# try:
+#     print(l1.get_latura())
+# except Exception as e:
+#     print(e)
+#
+# print(R1.get_raza())
+# R1.set_raza(4)
+# print(R1.get_raza())
+#
+# R1.del_raza()
+#
+# try:
+#     print(R1.get_raza())
+# except Exception as e:
+#     print(e)
+# print(R1.descrie())
 
-l1.set_latura(4)
-print(l1.get_latura())
-l1.del_latura()
-try:
-    print(l1.get_latura())
-except Exception as e:
-    print(e)
-
-print(R1.get_raza())
-R1.set_raza(4)
-print(R1.get_raza())
-
-R1.del_raza()
-
-try:
-    print(R1.get_raza())
-except Exception as e:
-    print(e)
-print(R1.descrie())
-
-print(l1.aria_patrat(5)) # aici cred ca nu trebuie sa introduc eu manual argumentul, nu am stiut cum sa
+print(l1.aria()) # aici cred ca nu trebuie sa introduc eu manual argumentul, nu am stiut cum sa
                          # il ia automat din declarerea variabile
-print(R1.aria_cerc(2))   # aici cred ca nu trebuie sa introduc eu manual argumentul, nu am stiut cum sa
+print(R1.aria())   # aici cred ca nu trebuie sa introduc eu manual argumentul, nu am stiut cum sa
                          # il ia automat din declarerea variabile
